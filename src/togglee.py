@@ -5,4 +5,7 @@ class Togglee:
         self.toggles = defaults
     
     def isEnabled(self, prop: str):
-        return self.toggles[prop]
+        if self.toggles is not None and prop in self.toggles:
+            return self.toggles[prop]
+        else:
+            return False
