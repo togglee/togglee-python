@@ -1,4 +1,4 @@
-.. image:: https://user-images.githubusercontent.com/3071208/90978824-2afb4780-e540-11ea-94bc-3d57e857bd8e.png
+.. image:: https://user-images.githubusercontent.com/3071208/90978825-2b93de00-e540-11ea-8e0d-60267e95fec8.png
 ==================
 
 Motivation
