@@ -14,6 +14,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Python 3.8 (togglee-python) interpreter library" level="application" />
+    <orderEntry type="library" name="Python togglee-python interpreter library" level="application" />
   </component>
 </module>

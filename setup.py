@@ -12,7 +12,7 @@ with open('requirements_prod.txt') as f:
 
 setup(
     name='togglee',
-    version=os.getenv('GITHUB_RUN_NUMBER', '0.0.1-SPANPSHOT'),
+    version=f'0.0.{os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}',
     description='Simple toggles for python from a url reference',
     long_description=readme,
     author='kanekotic',
