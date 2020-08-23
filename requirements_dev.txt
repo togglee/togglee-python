@@ -1,5 +1,0 @@
-Faker
-nose
-nose-cov
-nose-xunitmp
-pylint

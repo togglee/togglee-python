@@ -32,10 +32,10 @@ clean-test:
 	rm -fr htmlcov/
 
 deps: .venv
-	. .venv/bin/activate && pip install -U -r requirements.txt -t ./src/libs
+	. .venv/bin/activate && pip install -U -r requirements_prod.txt -t ./src/libs
 
 dev_deps: .venv
-	. .venv/bin/activate && pip install -U -r requirements_dev.txt
+	. .venv/bin/activate && pip install -U -r requirements.txt
 
 lint:
 	. .venv/bin/activate && pylint -r n src/main.py tests/main_test.py

@@ -1,0 +1,9 @@
+requests
+
+responses
+Faker
+mock
+nose
+nose-cov
+nose-xunitmp
+pylint
