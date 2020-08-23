@@ -1,8 +1,8 @@
 import os
 from setuptools import setup, find_packages
 
-with open('README.rst') as f:
-    readme = f.read()
+with open("README.md", "r") as f:
+    long_description = f.read()
 
 with open('LICENSE') as f:
     license = f.read()
@@ -19,6 +19,7 @@ setup(
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
     install_requires=required,
+    long_description_content_type="text/markdown",
     license=license,
     packages=find_packages()
 )
