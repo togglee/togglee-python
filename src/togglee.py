@@ -12,7 +12,6 @@ class Togglee:
         self._thread = threading.Thread(target=self._scheduler_event)
         self._thread.start()
 
-
     def is_enabled(self, prop: str):
         return self._toggles[prop] if self._toggles is not None and prop in self._toggles else False
 

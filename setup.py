@@ -13,9 +13,9 @@ setup(
     version='0.0.1',
     description='Simple toggles for python from a url reference',
     long_description=readme,
-    author='Kanekotic',
+    author='kanekotic',
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(where="src")
 )
