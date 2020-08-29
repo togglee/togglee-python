@@ -1,5 +1,5 @@
 import time
-from src.togglee import Togglee
+from togglee.togglee import Togglee
 
 url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles"
 refresh_rate_seconds = 5

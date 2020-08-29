@@ -1,10 +1,8 @@
 from unittest import TestCase
-import requests
 import responses
 
 from faker import Faker
-from togglee import Togglee
-from mock import patch
+from togglee.togglee import Togglee
 import time
 
 fake = Faker()

@@ -41,7 +41,7 @@ lint:
 	. .venv/bin/activate && pylint -r n src/main.py tests/main_test.py
 
 test:
-	. .venv/bin/activate && PYTHONPATH=./src/ nosetests ./tests/* --config=.noserc
+	. .venv/bin/activate && PYTHONPATH=./src/toggle nosetests --config=.noserc
 
 build: clean
 	mkdir ./dist

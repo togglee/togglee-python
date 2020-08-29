@@ -1,4 +1,6 @@
 [nosetests]
+exe = True
+tests = tests/
 stop=1
 processes=-1
 logging-level=CRITICAL
