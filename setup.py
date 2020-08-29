@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 with open('requirements_prod.txt') as f:
     required = f.read().splitlines()
 
-version: str = '0.0.' + os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")
+version = '0.0.' + os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")
 
 setup(
     name='togglee',
@@ -23,5 +23,8 @@ setup(
     url='https://github.com/togglee/togglee-python',
     install_requires=required,
     license=license,
-    packages=find_packages(where='src')
+    packages=find_packages(where='src'),
+    package_dir={
+        '': 'src',
+    }
 )
