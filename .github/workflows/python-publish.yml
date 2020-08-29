@@ -14,7 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install virtualenv setuptools wheel twine
+        python -m pip install --user --upgrade virtualenv setuptools wheel twine
     - name: Make all
       run: |
         make all

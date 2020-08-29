@@ -7,3 +7,4 @@ nose
 nose-cov
 nose-xunitmp
 pylint
+pypandoc
