@@ -19,7 +19,6 @@ setup(
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
     install_requires=required,
-    long_description_content_type="text/markdown",
     license=license,
     packages=find_packages()
 )
