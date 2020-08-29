@@ -18,7 +18,7 @@ clean-pyc:
 	find . -name '__pycache__' -exec rm -fr {} +
 
 deps: .venv
-	. .venv/bin/activate && pip install -U -r requirements.txt
+	. .venv/bin/activate && pip3 install -U -r requirements.txt
 
 run: clean
-	. .venv/bin/activate && python main.py
+	. .venv/bin/activate && python3 main.py
