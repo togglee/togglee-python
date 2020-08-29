@@ -1,14 +1,11 @@
 |LogoMakr_4ojFPZ|
-=================
 
 Motivation
-----------
 
 This is a library to use feature toggles as a service. It refresh
 toggles from a URL that can be a simple file or a service.
 
 Usage
------
 
 .. code:: python
 

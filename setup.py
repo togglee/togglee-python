@@ -10,11 +10,14 @@ with open('LICENSE') as f:
 with open('requirements_prod.txt') as f:
     required = f.read().splitlines()
 
+version: str = '0.0.' + {os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}
+
 setup(
     name='togglee',
-    version=f'0.0.{os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}',
+    version=version,
     description='Simple toggles for python from a url reference',
     long_description=readme,
+    long_description_content_type= 'text/x-rst',
     author='kanekotic',
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
