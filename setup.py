@@ -2,6 +2,7 @@ import os
 import pypandoc
 from setuptools import setup, find_packages
 
+pypandoc.download_pandoc()
 long_description = pypandoc.convert_file('README.md', 'rst')
 
 with open('LICENSE') as f:
