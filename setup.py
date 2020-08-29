@@ -14,7 +14,7 @@ setup(
     name='togglee',
     version=f'0.0.{os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}',
     description='Simple toggles for python from a url reference',
-    long_description=readme,
+    long_description=long_description,
     author='kanekotic',
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
