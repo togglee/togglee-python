@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 with open('requirements_prod.txt') as f:
     required = f.read().splitlines()
 
-version: str = '0.0.' + {os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}
+version: str = '0.0.' + os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")
 
 setup(
     name='togglee',
