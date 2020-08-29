@@ -1,8 +1,8 @@
 import os
+import pypandoc
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as f:
-    long_description = f.read()
+long_description = pypandoc.convert('README.md', 'rst')
 
 with open('LICENSE') as f:
     license = f.read()
