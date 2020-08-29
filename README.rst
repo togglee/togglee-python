@@ -12,7 +12,7 @@ Usage
 
 .. code:: python
 
-   import Togglee from togglee
+   from togglee import Togglee
 
    url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/b67985d8e3a5112c9be2da47bdadf2cf17edbe44/toggles"
    refresh_rate_seconds = 5
@@ -22,7 +22,7 @@ Usage
    subject = Togglee(url, refresh_rate_seconds, default_values)
    if subject.is_enabled("prop"):
        print("do stuff")
-   else
+   else:
        print("dont do stuff")
 
 .. |LogoMakr_4ojFPZ| image:: https://user-images.githubusercontent.com/3071208/90978825-2b93de00-e540-11ea-8e0d-60267e95fec8.png
