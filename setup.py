@@ -1,9 +1,8 @@
 import os
-import pypandoc
 from setuptools import setup, find_packages
 
-pypandoc.download_pandoc()
-long_description = pypandoc.convert_file('README.md', 'rst')
+with open('README.rst') as f:
+    readme = f.read()
 
 with open('LICENSE') as f:
     license = f.read()
@@ -15,7 +14,7 @@ setup(
     name='togglee',
     version=f'0.0.{os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")}',
     description='Simple toggles for python from a url reference',
-    long_description=long_description,
+    long_description=readme,
     author='kanekotic',
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
