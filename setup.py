@@ -23,5 +23,5 @@ setup(
     url='https://github.com/togglee/togglee-python',
     install_requires=required,
     license=license,
-    packages=find_packages()
+    packages=find_packages(where='src')
 )
