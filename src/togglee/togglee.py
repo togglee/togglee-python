@@ -20,8 +20,11 @@ class Togglee:
         return self._get_value(prop, context) if self._toggles is not None and prop in self._toggles else False
 
     def _get_value(self, prop, context):
-        toggle = self._toggles[prop]
-        return strategy_maps[toggle['type']](toggle, context)
+        try:
+            toggle = self._toggles[prop]
+            return strategy_maps[toggle['type']](toggle, context)
+        except:
+            return False
 
     def _scheduler_event(self):
         self._refresh_toggles()
@@ -33,5 +36,5 @@ class Togglee:
         try:
             response = requests.get(self._url)
             self._toggles = map_json_to_toggles(response.json())
-        except Exception as e:
-            print("unable to retrieve value", e)
+        except:
+            pass
