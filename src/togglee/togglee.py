@@ -13,6 +13,14 @@ strategy_maps = {
 }
 
 
+def map_json_to_toggles(json_toggles):
+    mapped_toggles = {}
+    for toggle in json_toggles['toggles']:
+        mapped_toggles[toggle['name']] = toggle
+        mapped_toggles[toggle['name']].pop('name')
+    return mapped_toggles
+
+
 class Togglee:
     def __init__(self, url: str, refresh_rate: int, defaults: dict):
         self._url = url
@@ -34,13 +42,9 @@ class Togglee:
             time.sleep(self._refresh_rate)
             self._refresh_toggles()
 
-    def _map_json_to_toggles(self, json_toggles):
-        mapped_toggles = {}
-        for toggle in json_toggles['toggles']:
-            mapped_toggles[toggle['name']] = toggle
-            mapped_toggles[toggle['name']].pop('name')
-        return mapped_toggles
-
     def _refresh_toggles(self):
-        response = requests.get(self._url)
-        self._toggles = self._map_json_to_toggles(response.json())
+        try:
+            response = requests.get(self._url)
+            self._toggles = map_json_to_toggles(response.json())
+        except Exception as e:
+            print("unable to retrieve value", e)
