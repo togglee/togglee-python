@@ -60,20 +60,3 @@ class ToggleTest(TestCase):
         assert subject.is_enabled("prop_True")
         assert not subject.is_enabled("prop_False")
 
-    @responses.activate
-    def test_refresh_cache_with_not_correct_json(self):
-        url = fake.url()
-        fakeDict = {
-            "prop_True": {
-                "type": "release",
-                "value": True
-            }
-        }
-        responses.add(responses.GET, url,
-                      body='not json', status=200)
-        try:
-            subject = Togglee(url, 1, fakeDict)
-            time.sleep(5)
-            assert subject.is_enabled("prop_True")
-        except:
-            self.fail("no exception expected")
