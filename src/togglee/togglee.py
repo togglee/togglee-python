@@ -13,6 +13,7 @@ class Togglee:
         self._refresh_rate = refresh_rate
         self._toggles = defaults
         self._thread = threading.Thread(target=self._scheduler_event)
+        self._thread.daemon = True
         self._thread.start()
 
     def is_enabled(self, prop: str, context=None):
