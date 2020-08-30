@@ -9,7 +9,7 @@ operations_maps = {
 
 
 def context_strategy(toggle, context):
-    for condition in toggle['coonditions']:
+    for condition in toggle['conditions']:
         value = context[condition['field']]
         expected_value = context[condition['value']]
         operation = context[condition['operation']]

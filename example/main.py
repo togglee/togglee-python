@@ -12,4 +12,12 @@ while True:
         print("do stuff")
     else:
         print("dont do stuff")
+    if subject.is_enabled("prop3", {"username": "user1"}):
+        print("do stuff for user 1")
+    else:
+        print("dont do stuff for user 1")
+    if subject.is_enabled("prop3", {"username": "user2"}):
+        print("do stuff for user 2")
+    else:
+        print("dont do stuff for user 2")
     time.sleep(7)
