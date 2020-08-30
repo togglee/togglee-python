@@ -3,22 +3,8 @@ import time
 
 import requests
 
-
-def release_strategy(toggle, _):
-    return toggle['value']
-
-
-strategy_maps = {
-    'release': release_strategy
-}
-
-
-def map_json_to_toggles(json_toggles):
-    mapped_toggles = {}
-    for toggle in json_toggles['toggles']:
-        mapped_toggles[toggle['name']] = toggle
-        mapped_toggles[toggle['name']].pop('name')
-    return mapped_toggles
+from togglee.helpers.mappers import map_json_to_toggles
+from togglee.strategies.main import strategy_maps
 
 
 class Togglee:
