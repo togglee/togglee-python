@@ -11,8 +11,8 @@ operations_maps = {
 def context_strategy(toggle, context):
     for condition in toggle['conditions']:
         value = context[condition['field']]
-        expected_value = context[condition['value']]
-        operation = context[condition['operation']]
-        if operations_maps[operation](expected_value, value):
+        expected_value = condition['value']
+        operation = condition['operation']
+        if not operations_maps[operation](expected_value, value):
             return False
     return True
