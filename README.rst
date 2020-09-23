@@ -39,7 +39,8 @@ add it to your project using `pip install togglee`
 **Release**
 
 Simple true/false logical path definition.
-.. code:: json
+.. code-block:: JSON
+
     {
         type: 'release',
         value: true,
@@ -49,7 +50,8 @@ Simple true/false logical path definition.
 
 Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available). 
 
-.. code:: json
+.. code-block:: JSON
+
     {
         "type": "context",
         "conditions": [
