@@ -43,8 +43,8 @@ Simple true/false logical path definition.
 .. code-block:: JSON
 
     {
-        type: 'release',
-        value: true,
+        "type": "release",
+        "value": true,
     }
 
 **Context**
