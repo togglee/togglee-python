@@ -4,9 +4,6 @@ from setuptools import setup, find_packages
 with open('README.rst') as f:
     readme = f.read()
 
-with open('LICENSE') as f:
-    license = f.read()
-
 with open('requirements_prod.txt') as f:
     required = f.read().splitlines()
 
@@ -22,7 +19,7 @@ setup(
     author_email='me@kanekotic.com',
     url='https://github.com/togglee/togglee-python',
     install_requires=required,
-    license=license,
+    license='Apache-2.0',
     packages=find_packages(where='src'),
     package_dir={
         '': 'src',
