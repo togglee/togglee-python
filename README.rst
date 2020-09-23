@@ -65,11 +65,12 @@ Allows complex logic to decide the outcome of the logical path (example traffic,
     }
 
 available operations are:
-* 'eq': equal (===)
-* 'ne': not equal (!==)
-* 'gt': greater than (>)
-* 'ge': greater equal (>=)
-* 'lt': lesser than (<)
-* 'le': lesser qqual (<=)
+
+- 'eq': equal (===)
+- 'ne': not equal (!==)
+- 'gt': greater than (>)
+- 'ge': greater equal (>=)
+- 'lt': lesser than (<)
+- 'le': lesser qqual (<=)
 
 .. |LogoMakr_4ojFPZ| image:: https://user-images.githubusercontent.com/3071208/90978825-2b93de00-e540-11ea-8e0d-60267e95fec8.png
