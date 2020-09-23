@@ -39,6 +39,7 @@ add it to your project using `pip install togglee`
 **Release**
 
 Simple true/false logical path definition.
+
 .. code-block:: JSON
 
     {
