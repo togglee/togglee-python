@@ -3,9 +3,13 @@ from togglee.togglee import Togglee
 
 url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles"
 refresh_rate_seconds = 5
-default_values = {
-    "prop": False
-}
+default_values = [
+    {
+        "name": "prop",
+        "type": "release",
+        "value": True
+    }
+]
 subject = Togglee(url, refresh_rate_seconds, default_values)
 while True:
     if subject.is_enabled("prop"):

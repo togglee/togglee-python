@@ -11,16 +11,18 @@ fake = Faker()
 class ToggleTest(TestCase):
     def test_use_default_toggles(self):
         url = fake.url()
-        fakeDict = {
-            "prop_True": {
-                "type": "release",
-                "value": True
-            },
-            "prop_False": {
-                "type": "release",
-                "value": False
-            }
-        }
+        fakeDict = [
+                {
+                    "name": "prop_True",
+                    "type": "release",
+                    "value": True
+                },
+                {
+                    "name": "prop_False",
+                    "type": "release",
+                    "value": False
+                }
+            ]
         subject = Togglee(url, 100, fakeDict)
         assert subject.is_enabled("prop_True")
         assert not subject.is_enabled("prop_False")
