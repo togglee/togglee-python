@@ -39,28 +39,28 @@ add it to your project using `pip install togglee`
 **Release**
 
 Simple true/false logical path definition.
-```js
-{
-    type: 'release',
-    value: true,
-}
-```
+.. code:: json
+    {
+        type: 'release',
+        value: true,
+    }
 
 **Context**
 
 Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available). 
-```js
-{
-    "type": "context",
-    "conditions": [
-        {
-            "field": "username",
-            "value": "user1",
-            "operation": "eq"
-        }
-    ]
-}
-```
+
+.. code:: json
+    {
+        "type": "context",
+        "conditions": [
+            {
+                "field": "username",
+                "value": "user1",
+                "operation": "eq"
+            }
+        ]
+    }
+
 available operations are:
 * 'eq': equal (===)
 * 'ne': not equal (!==)
