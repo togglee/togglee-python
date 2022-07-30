@@ -13,7 +13,7 @@ all: default
 default: clean dev_deps test build
 
 .venv:
-	if [ ! -e ".venv/bin/activate_this.py" ] ; then virtualenv --clear .venv ; fi
+	if [ ! -e ".venv/bin/activate_this.py" ] ; then python -m venv .venv ; fi
 
 clean: clean-build clean-pyc clean-test
 
