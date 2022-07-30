@@ -7,7 +7,7 @@ with open('README.rst') as f:
 with open('requirements_prod.txt') as f:
     required = f.read().splitlines()
 
-version = '0.0.' + os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")
+version = '1.0.' + os.getenv("GITHUB_RUN_NUMBER", "1-SNAPSHOT")
 
 setup(
     name='togglee',
